@@ -23,7 +23,7 @@ namespace ACCompass
         AppCompatImageView compassSpinner;
 
 
-
+        
 
         /// <summary>
         /// Activates the Compass and displays heading
@@ -71,7 +71,7 @@ namespace ACCompass
 
             var bearing = (float) ( e.Reading.HeadingMagneticNorth );
 
-            compassSpinner.Rotation = bearing;
+            compassSpinner.Rotation = -bearing;
             toolbar.Title = $"{app_name} - Heading: { bearing.ToString( "0.0" ) }";
         }
 
@@ -89,7 +89,7 @@ namespace ACCompass
             SetSupportActionBar( toolbar );
 
             //! Get our compass spinner reference :
-            compassSpinner = FindViewById<AppCompatImageView>( Resource.Id.compassSpinner );
+            compassSpinner = FindViewById<AppCompatImageView>( Resource.Id.compassLines );
 
             //! Save the app_name string resource :
             app_name = Resources.GetString( Resource.String.app_name );
