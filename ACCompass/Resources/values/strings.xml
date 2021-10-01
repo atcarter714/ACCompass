@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">AC Compass</string>
+    <string name="action_settings">Toggle Compass</string>
+	<string name="compass_desc">Background image for compass</string>
+	<string name="spinner_desc">Spinner for compass heading</string>
+</resources>
